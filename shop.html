@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .shopping-wrapper{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .shopping-container{
+            width: 60%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: auto;
+
+        }
+        .shopping{
+            background-color: red;
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .shopping-image{
+            width: 100%;
+            height: 60%;
+        }
+        .shopping-image img{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        .shopping-heading,.shopping-button{
+            width: 100%;
+            height: 20%;
+        }
+        .shopping-heading h2{
+            font-size: 2rem;
+            font-family: helvetica;
+            color: white;
+            text-align: center;
+        }
+        .shopping-button p{
+            font-size: 1.8rem;
+            color: white;
+            font-family: helvetica;
+            text-align: center;
+        }
+        .shopping-button button{
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            font-size: 2rem;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+        .shopping-cart{
+            width: 35%;
+            height: auto;
+        }
+        .shopping-button2{
+            display: flex;
+            width: 100%;
+            height: 20%;
+            align-items: center;
+            justify-content: space-around;
+        }
+        button{
+            width: 50px;
+            font-size: 1.5rem;
+        }
+        p{
+            font-size: 2rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="shopping-wrapper">
+        <div class="shopping-container" id="shoppingContainer">
+            <div class="shopping">
+                <div class="shopping-image">
+                    <img src="car.jpg" alt="car">
+                </div>
+                <div class="shopping-heading">
+                    <h2>Car</h2>
+                </div>
+                <div class="shopping-button">
+                 <p>$45000</p>
+                 <button>Buy</button>
+                </div>
+            </div>
+            <div class="shopping">
+                <div class="shopping-image">
+                    <img src="car.jpg" alt="car">
+                </div>
+                <div class="shopping-heading">
+                    <h2>Car</h2>
+                </div>
+                <div class="shopping-button">
+                 <p>$45000</p>
+                 <button>Buy</button>
+                </div>
+            </div>
+            <div class="shopping">
+                <div class="shopping-image">
+                    <img src="car.jpg" alt="car">
+                </div>
+                <div class="shopping-heading">
+                    <h2>Car</h2>
+                </div>
+                <div class="shopping-button">
+                 <p>$45000</p>
+                 <button>Buy</button>
+                </div>
+            </div>
+            <div class="shopping">
+                <div class="shopping-image">
+                    <img src="car.jpg" alt="car">
+                </div>
+                <div class="shopping-heading">
+                    <h2>Car</h2>
+                </div>
+                <div class="shopping-button">
+                 <p>$45000</p>
+                 <button>Buy</button>
+                </div>
+            </div>
+            <div class="shopping">
+                <div class="shopping-image">
+                    <img src="car.jpg" alt="car">
+                </div>
+                <div class="shopping-heading">
+                    <h2>Car</h2>
+                </div>
+                <div class="shopping-button">
+                 <p>$45000</p>
+                 <button>Buy</button>
+                </div>
+            </div>
+        </div>
+        <div class="shopping-cart">
+            <h1>This is  a Shopping Cart</h1>
+            <div class="shopping">
+                <div class="shopping-image">
+                    <img src="car.jpg" alt="car">
+                </div>
+                <div class="shopping-heading">
+                    <h2>Car</h2>
+                </div>
+                <div class="shopping-button">
+                 <p>$45000</p>
+                </div>
+                <div class="shopping-button2">
+                    <button>+</button>
+                    <p>0</p>
+                    <button>-</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const obj = [{
+            name: 'nissan',
+            id: 1,
+            img: 'car.jpg',
+            quantity: 10
+        },
+        {
+            name: 'toyota',
+            id: 2,
+            img: 'car2.jpg',
+            quantity: 5
+        },
+        {
+            name: 'corolla',
+            id: 3,
+            img: 'car2.jpg',
+            quantity: 7
+        },
+        {
+            name: 'crown',
+            id: 4,
+            img: 'car2.jpg',
+            quantity: 6
+        }
+        
+    ]
+        function Shopping(){
+            const container = document.getElementById("ShoppingContainer")
+            obj.map(function(r){
+                
+            })
+        }
+    </script>
+</body>
+</html>
