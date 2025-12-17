@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const name = [{name:"valentino"}]
+        // const age = {age:10};
+        // const colour = {colour: "blue"}
+        // const car = [{name:"toyota"}];
+        const cars = [
+  { name: "Toyota", km: 15000 },
+  { name: "Honda", km: 22000 },
+  { name: "Mazda", km: 18000 }
+];
+const status = {
+    status:"checked"
+}
+
+        // function adding(){
+        //     name.map(function(response){
+        //         console.log(response);
+        //         const add = {...response,...age}
+        //         console.log(add)
+        //     })
+        // }
+        // adding()
+        // function adding(){
+        //     car.map(function(response){
+        //         console.log(response);
+        //         const add = {...response,...colour};
+        //         console.log(add)
+        //     })
+        // }
+        // adding();
+
+
+        // function adding(){
+        //     const cars2 = cars.map(function(response){
+        //         const add = {...response,...status}
+        //         console.log(add)
+        //         return add
+        //     })
+        //     console.log(cars2)
+        // }
+        // adding()
+
+        const fruits = [
+  { name: "Mango", weight: 1.5 },
+  { name: "Banana", weight: 1 },
+  { name: "Orange", weight: 0.5 }
+];
+    const colour = {
+        colour : "unkown"
+    }
+function fruit(){
+    const fruit2 =  fruits.map(function (response){
+        const add = {...response,...colour}
+        console.log(add)
+        return add
+    })
+    console.log(fruit2)
+}
+fruit()
+    </script>
+</body>
+</html>

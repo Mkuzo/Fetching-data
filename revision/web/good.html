@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <p></p>
+        <button>Click me</button>
+    </div>
+    <script>
+      const data=[{
+            id:1,
+            name:"valentino",
+            age:10
+        },
+        {
+            id:2,
+            name:"alvan",
+            age:9
+        },
+        {
+            id:3,
+            name:"avelin",
+            age:7
+        }]
+        function display(){
+            const wrap = document.getElementById("wrapper");
+            data.map(function(response){
+                wrap.innerHTML += `
+                    <p>${response.name}</p>
+                    <button onclick="upply(${response.id})">Click Me</button>
+                `
+            })
+        }  
+        function upply(id){
+            alert(id);
+            console.log(id);
+            const finding = data.find(function(response2){
+                return response2.id === id;
+            })
+            console.log(finding);
+            alert(finding.name)
+        }
+        display()
+    </script>
+</body>
+</html>

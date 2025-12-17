@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sum = 0
+        const laptops = [
+            { brand: "HP", price: 50000, quantity: 2 },
+            { brand: "Dell", price: 60000, quantity: 1 }
+        ];
+
+        const shop = {
+            shopName: "Tech Store",
+            town: "Nairobi"
+        };
+        function put(){
+            laptops.map(function(response){
+                console.log(response);
+                const add = {...response,...shop}
+                console.log(add)
+                const mult = response.quantity * response.price;
+                console.log(mult)
+                sum += mult ;
+            })
+            console.log(sum)
+        }
+        put()
+    </script>
+</body>
+</html>

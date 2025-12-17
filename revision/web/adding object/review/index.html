@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapp-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .wrap{
+            width: 230px;
+            height: 300px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: seagreen;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapp-container" id="wrapp">
+        <div class="wrap">
+            <img src="image.jpg" alt="">
+            <p>Valentino</p>
+            <button >Info</button>
+        </div>
+    </div>   
+    <script>
+        const data=[{
+            id:1,
+            img:'/images/image.jpg',
+            name:"valentino",
+            age:10
+        },
+        {
+            id:2,
+            img:'/images/image.jpg',
+            name:"alvan",
+            age:9
+        },
+        {
+            id:3,
+            img:'/images/image.jpg',
+            name:"avelin",
+            age:7
+        }]
+        const wrapp = document.getElementById("wrapp")
+        function result(){
+            data.map(function(response){
+                wrapp.innerHTML += `
+                    <div class="wrap">
+                        <img src="image.jpg" alt="">
+                        <p>${response.name}</p>
+                        <button onclick="alertAge(${response.id})">Info</button>
+                    </div>        
+                `
+            });
+        }
+        function alertAge(id){
+            const finding = data.find(function(response2){
+            return response2.id === id;
+            })
+            alert(finding.age);
+        }
+        result()
+    </script>
+</body>
+</html>

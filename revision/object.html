@@ -1,0 +1,91 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="add()">+</button>
+    <p id="result"></p>
+    <button onclick="sub()">-</button>
+    <script>
+        let sum = 0;
+        let num = 0;
+        const result = document.getElementById("result");
+        function add(){
+            num += 1;
+            result.innerHTML =`${num} `
+        }
+        function sub(){
+            if(num > 0){
+                num-=1;
+                result.innerHTML = `${num}`
+            }
+        }
+        const name = {
+            name: "Valentino"
+        }
+        const age ={
+            age: 10
+        }
+        function put(){
+            const put2 = {...name,...age}
+            console.log(put2);
+        }
+        put()
+
+        const students = [
+        { name: "John", age: 12 },
+        { name: "Amina", age: 11 },
+        { name: "Ali", age: 13 }
+        ];
+
+        const schoolInfo = {
+        school: "Sunrise Primary",
+        county: "Nairobi"
+        };
+        function putting(){
+            students.map(function(response){
+                const primary = {...response,...schoolInfo};
+                console.log(primary);
+                sum += response.age;
+                console.log(sum)
+            })
+        
+        }
+    
+        putting()
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sum = 0;
+        const products = [
+  { name: "Pencil", price: 10 },
+  { name: "Book", price: 100 },
+  { name: "Bag", price: 500 }
+];
+const discount = { discount: "10%" };
+function put(){
+    products.map(function(response){
+        const put2 = {...response,...discount}
+        console.log(put2);
+        sum += response.price;
+        console.log(sum)
+    });
+}
+put()
+    </script>
+</body>
+</html>

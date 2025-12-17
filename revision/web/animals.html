@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapp">
+        <p></p>
+        <button>Click Me</button>
+    </div>
+    <script>
+        const result = document.getElementById("wrapp")
+        const animals = [
+  {id:1 ,name: "Dog", legs: 4 },
+  { id:2,name: "Chicken", legs: 2 },
+  {id:3, name: "Cow", legs: 4 }
+];
+    function display(){
+        animals.map(function(response){
+            console.log(response);
+            result.innerHTML += `
+                <p>${response.name}</p>
+                <button onclick="cart(${response.id})">Click Me</button> 
+            ` 
+        });
+    }
+    function cart(id){
+        const wrap = animals.find(function(response2){
+          return response2.id === id;
+        })
+        alert(wrap.id);
+        console.log(wrap)
+    }
+    display()
+    </script>
+</body>
+</html>

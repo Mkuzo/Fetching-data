@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sum = 0;
+        const kids = [
+  { name: "Isaac", steps: 9000 },
+  { name: "Nia", steps: 4200 }
+];
+
+const tracker = {
+  dailyGoal: 8000,
+  activity: "Step Challenge"
+};
+
+function show(){
+    kids.map(function(response){
+        console.log(response);
+        const put = {...response,...tracker};
+        console.log(put);
+        sum += response.steps;
+        console.log(sum)
+    });
+}
+show()
+function getPerson(){
+    const person= kids.filter(function(response2){
+        console.log(response2);
+        return response2.steps > 8000;
+})
+console.log(person)
+}
+getPerson()
+    </script>
+</body>
+</html>

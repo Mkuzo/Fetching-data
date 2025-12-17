@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sum2 = 0;
+        let sum3 = 0;
+        const groceries = [
+    { name: "Milk", price: 50, quantity: 4 },
+  { name: "Bread", price: 40, quantity: 3 }
+];
+        const phones = [
+        { brand: "Samsung", price: 20000, quantity: 3 },
+        { brand: "Tecno",   price: 15000, quantity: 5 }
+        ];
+        function sum(){
+            phones.map(function(response){
+                const mult = response.price * response.quantity;
+                sum2 += mult;
+                console.log(mult)
+                console.log(response);
+            })
+            console.log(sum2)
+        }
+        sum()
+
+        function add(){
+            groceries.map(function(response2){
+                console.log(response2)
+                const  mult2 = response2.price * response2.quantity;
+                sum3 += mult2
+                console.log(mult2)
+            })
+            console.log(sum3);
+        }
+        add()
+    </script>
+</body>
+</html>

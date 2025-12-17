@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sum = 0
+        const buses = [
+  { busNo: 1, kmTravelled: 120 },
+  { busNo: 2, kmTravelled: 95 }
+];
+
+const route = {
+  routeName: "City Route",
+  totalKm: 200
+};
+    function show(){
+        buses.map(function(response){
+            console.log(response)
+            const put = {...response,...route}
+            console.log(put);
+            sum += response.kmTravelled
+        })
+    }
+    function getBus(){
+        const bus = buses.filter(function(response2){
+            console.log(response2);
+            return response2.kmTravelled > 100;
+        })
+        console.log(bus);
+    }
+    getBus()
+    </script>
+</body>
+</html>

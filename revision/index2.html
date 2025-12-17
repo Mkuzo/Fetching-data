@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 200px;
+            height: 200px;
+            background-color: hotpink;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+        }
+        .container p{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 2rem;
+        }
+        .container button{
+            padding: 10px;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="decrease()">-</button>
+        <p id="result">0</p>
+        <button onclick="increase()">+</button>
+    </div>
+    <script>
+//         const products=[{
+//         name:'fruits',
+//         price:200
+//      },
+//     {name:'vegetable',
+//   price:300},{
+//     name:'maize',
+//     price:400
+//   }]
+//   const grade = [
+//   { name: "girls", number: 300 },
+//   { name: "boys", number: 250 }
+// ];
+const cars = [
+  { name: "Toyota", km: 15000 },
+  { name: "Honda", km: 22000 },
+  { name: "Mazda", km: 18000 },
+  { name: "Nissan", km: 26000 }
+];
+
+
+    //     const result = document.getElementById("result");
+    //     let num = 0
+    //     function increase(){
+    //         num += 1
+    //         result.innerHTML = `${num}`
+    //     }
+    //     function decrease(){
+    //         if(num > 0){
+    //             num -= 1;
+    //             result.innerHTML = `${num}`
+    //         }
+    //         else{
+    //             alert("It's less than zero");
+    //         }
+    //     }
+    //     function adding(){
+    //         let sum = 0;
+    //     products.map(function(total){
+    //         sum += total.price 
+    //     })
+    //     console.log(sum)
+    // }
+    function addingGrade(){
+        let sum = 0
+        cars.map(function(total){
+            sum += total.km;
+        })
+        console.log(sum)
+    }
+    function filterCars(){
+        cars.filter(function(display){
+            return display.km > 20000;
+            
+        })
+    }
+    addingGrade()
+    </script>
+</body>
+</html>

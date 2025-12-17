@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sum = 0;
+        const clothes = [
+  { item: "T-Shirt", price: 400, quantity: 3 },
+  { item: "Jeans", price: 900, quantity: 2 }
+];
+
+const boutique = {
+  boutiqueName: "Smart Wear",
+  location: "Eldoret"
+};
+function add(){
+    clothes.map(function(response){
+        console.log(response)
+        const put ={...response,...boutique};
+        console.log(put);
+        const mult = response.quantity * response.price;
+        console.log(mult);
+        sum += mult;
+        console.log(sum)
+    })
+}
+add()
+    </script>
+</body>
+</html>

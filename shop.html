@@ -26,6 +26,7 @@
             width: 300px;
             height: auto;
             border-radius: 10px;
+            margin-bottom: 20px;
         }
         .shopping-image{
             width: 100%;
@@ -86,7 +87,7 @@
 <body>
     <div class="shopping-wrapper">
         <div class="shopping-container" id="shoppingContainer">
-            <div class="shopping">
+            <!-- <div class="shopping">
                 <div class="shopping-image">
                     <img src="car.jpg" alt="car">
                 </div>
@@ -145,60 +146,106 @@
                  <p>$45000</p>
                  <button>Buy</button>
                 </div>
-            </div>
+            </div> -->
         </div>
-        <div class="shopping-cart">
+        <div class="shopping-cart" id="shoppingCart">
             <h1>This is  a Shopping Cart</h1>
-            <div class="shopping">
-                <div class="shopping-image">
-                    <img src="car.jpg" alt="car">
-                </div>
-                <div class="shopping-heading">
-                    <h2>Car</h2>
-                </div>
-                <div class="shopping-button">
-                 <p>$45000</p>
-                </div>
-                <div class="shopping-button2">
-                    <button>+</button>
-                    <p>0</p>
-                    <button>-</button>
-                </div>
-            </div>
+   
         </div>
     </div>
     <script>
         const obj = [{
             name: 'nissan',
             id: 1,
-            img: 'car.jpg',
-            quantity: 10
+            img: 'nissan.jpg',
+            quantity: 1,
+            price: 800
         },
         {
             name: 'toyota',
             id: 2,
-            img: 'car2.jpg',
-            quantity: 5
+            img: 'toyota.jpg',
+            quantity: 5,
+            price: 700
         },
         {
             name: 'corolla',
             id: 3,
-            img: 'car2.jpg',
-            quantity: 7
+            img: 'corolla.jpg',
+            quantity: 7,
+            price: 800
         },
         {
             name: 'crown',
             id: 4,
-            img: 'car2.jpg',
-            quantity: 6
+            img: 'crown.jpg',
+            quantity: 6,
+            price: 900
         }
         
     ]
+    const cart = []
         function Shopping(){
-            const container = document.getElementById("ShoppingContainer")
+            const container = document.getElementById("shoppingContainer")
             obj.map(function(r){
-                
+              container.innerHTML += `
+                <div class="shopping">
+                    <div class="shopping-image">
+                    <img src= ${r.img} alt="car">
+                </div>
+
+                <div class="shopping-heading">
+                    <h2>${r.name}</h2>
+                </div>
+                <div class="shopping-button">
+                 <p>${r.price}</p>
+                 <button onclick="product(${r.id})">Buy</button>
+                </div>
+            </div>
+              `  
             })
+        }
+        function product(id){
+            let itemNumber = {
+                itemNumber:0
+            };
+           const product = obj.find(function(id2){
+               return id2.id === id;
+            });
+            const putting = {...itemNumber,...product}
+            cart.push(putting);
+            display()
+            console.log(cart);
+        }
+        function display(){
+               const shoppingCart = document.getElementById("shoppingCart")
+                shoppingCart.innerHTML = ""
+            cart.map(function(displayCart){
+                shoppingCart.innerHTML += `
+                         <div class="shopping">
+                <div class="shopping-image">
+                    <img src=${displayCart.img} alt="car">
+                </div>
+                <div class="shopping-heading">
+                    <h2>${displayCart.name}</h2>
+                </div>
+                <div class="shopping-button">
+                 <p>${displayCart.price}</p>
+                </div>
+                <div class="shopping-button2">
+                    <button onclick="add(${displayCart.itemNumber})">+</button>
+                    <p>${displayCart.itemNumber}</p>
+                    <button>-</button>
+                </div>
+            </div>
+                `
+            })
+
+        }
+        Shopping();
+        function add(itemNumber){
+            itemNumber +=  1;
+            console.log(itemNumber)
         }
     </script>
 </body>

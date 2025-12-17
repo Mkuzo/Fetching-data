@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.cotainer{
+    width: 100%;
+    height: auto;
+}
+.card{
+    width: 100%;
+    height: 90vh;
+    background-image: url(image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card-container{
+    width: 30%;
+    height: 40%;
+    background-color: white;
+    color: rgb(13, 13, 13);
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card-container h3{
+    font-weight: bold;
+    font-size: 1.5rem;   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin: 10px;
+}
+.card-container button{
+    padding: 20px 50px;
+    background-color: fuchsia;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 10px;
+}
+.card-container p{
+    margin: 10px;
+}
+.nav{
+    width: 100%;
+    height: 10%;
+    background-color: fuchsia;
+}
+.nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+}
+.nav ul li{
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+.nav ul li:hover{
+    color: rgb(51, 0, 255);
+}
+.body-container{
+    width: 100%;
+    height: auto;
+}
+.body-wrapper{
+    width: 100%;
+    height: 70%;
+}
+.image-wrapper{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.image-wrapper img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+.blog-container{
+    width: 100%;
+    height: auto;
+    background-color: gold;
+    padding: 20px;
+}
+.blog{
+    width: 90%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    margin: auto;
+}
+.image{
+    width: 48%;
+    height: 100%;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.text{
+    width: 48%;
+    height: 200px;
+}
+.text h3{
+    font-size: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.text button{
+    padding: 20px 50px;
+    background-color: fuchsia;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 10px;  
+}
+.text p{
+    margin: 20px 0;
+}

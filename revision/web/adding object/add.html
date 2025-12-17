@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const supplies = [
+        { item: "Pencil", price: 10, quantity: 20 },
+        { item: "Ruler", price: 15, quantity: 12 }
+        ];
+
+            const classroom = {
+            className: "Grade 4",
+            teacher: "Mrs. Achieng"
+            };
+            function add(){
+                supplies.map(function(response){
+                    console.log(response);
+                    const adding = {...response,...classroom};
+                    console.log(adding)
+            })
+            }
+            add()
+    </script>
+</body>
+</html>
