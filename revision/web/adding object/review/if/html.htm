@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const busSeats = [
+            { seatNumber: 1, student: "Ali" },
+            { seatNumber: 2, student: "Asha" }
+        ];
+        const seat = { seatNumber: 2, student: "Brian" }
+        function compere(){
+            busSeats.map(function(response){
+                if(response.seatNumber === seat.seatNumber){
+                    alert("It's There")
+                }else{
+                    busSeats.push(seat);
+                    console.log(busSeats)
+                }
+            })
+        }
+        compere()
+    </script>
+</body>
+</html>

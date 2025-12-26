@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let students = [
+            { roll: 1, name: "Ali" },
+            { roll: 2, name: "Asha" }
+        ];
+        const name = { roll: 3, name: "John" };
+        function nameing(){
+            const check = students.some(function(response){
+                response.roll === name.roll;
+            })
+            if(check === false){
+                students.push(name);
+                console.log(students);
+            }else{
+                alert("It's There")
+            }
+        }  
+        nameing()     
+    </script>
+</body>
+</html>

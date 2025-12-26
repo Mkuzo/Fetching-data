@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cart = [
+            { id: 1, name: "Pen" },
+            { id: 2, name: "Book" }
+        ];
+        const item ={ id: 3, name: "Pencil" }
+        function findingSome(){
+           const check =  cart.some(function(response){
+             return response.id === item.id;               
+            });
+            console.log(check);
+            if(check === false){
+                cart.push(item);
+                console.log(cart)
+            }else{
+                alert("It's There")
+            }
+            // if(response.id === item.id){
+            //     alert("It's There");
+            // }else{
+            //     cart.push(item);
+            //     console.log(cart)
+            // }
+        }
+        findingSome()
+    </script>
+</body>
+</html>

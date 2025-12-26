@@ -87,71 +87,13 @@
 <body>
     <div class="shopping-wrapper">
         <div class="shopping-container" id="shoppingContainer">
-            <!-- <div class="shopping">
-                <div class="shopping-image">
-                    <img src="car.jpg" alt="car">
-                </div>
-                <div class="shopping-heading">
-                    <h2>Car</h2>
-                </div>
-                <div class="shopping-button">
-                 <p>$45000</p>
-                 <button>Buy</button>
-                </div>
-            </div>
-            <div class="shopping">
-                <div class="shopping-image">
-                    <img src="car.jpg" alt="car">
-                </div>
-                <div class="shopping-heading">
-                    <h2>Car</h2>
-                </div>
-                <div class="shopping-button">
-                 <p>$45000</p>
-                 <button>Buy</button>
-                </div>
-            </div>
-            <div class="shopping">
-                <div class="shopping-image">
-                    <img src="car.jpg" alt="car">
-                </div>
-                <div class="shopping-heading">
-                    <h2>Car</h2>
-                </div>
-                <div class="shopping-button">
-                 <p>$45000</p>
-                 <button>Buy</button>
-                </div>
-            </div>
-            <div class="shopping">
-                <div class="shopping-image">
-                    <img src="car.jpg" alt="car">
-                </div>
-                <div class="shopping-heading">
-                    <h2>Car</h2>
-                </div>
-                <div class="shopping-button">
-                 <p>$45000</p>
-                 <button>Buy</button>
-                </div>
-            </div>
-            <div class="shopping">
-                <div class="shopping-image">
-                    <img src="car.jpg" alt="car">
-                </div>
-                <div class="shopping-heading">
-                    <h2>Car</h2>
-                </div>
-                <div class="shopping-button">
-                 <p>$45000</p>
-                 <button>Buy</button>
-                </div>
-            </div> -->
+            
         </div>
         <div class="shopping-cart" id="shoppingCart">
             <h1>This is  a Shopping Cart</h1>
    
         </div>
+        .
     </div>
     <script>
         const obj = [{
@@ -207,14 +149,27 @@
         }
         function product(id){
             let itemNumber = {
-                itemNumber:0
+                itemNumber:1
             };
            const product = obj.find(function(id2){
                return id2.id === id;
             });
             const putting = {...itemNumber,...product}
-            cart.push(putting);
-            display()
+            console.log(putting)
+                if(cart.length > 0){
+                    const check = cart.some(function(response){
+                        return response.id === putting.id;
+                    });
+                    if(check === false){
+                        cart.push(putting);
+                        display()
+                    }else{
+                        alert("It's There")
+                    }
+                }else{
+                    cart.push(putting)
+                    display();
+                }
             console.log(cart);
         }
         function display(){
@@ -230,12 +185,12 @@
                     <h2>${displayCart.name}</h2>
                 </div>
                 <div class="shopping-button">
-                 <p>${displayCart.price}</p>
+                 <p id="multiplied">${displayCart.price}</p>
                 </div>
                 <div class="shopping-button2">
-                    <button onclick="add(${displayCart.itemNumber})">+</button>
-                    <p>${displayCart.itemNumber}</p>
-                    <button>-</button>
+                    <button onclick="add(${displayCart.id})">+</button>
+                    <p id="result">${displayCart.itemNumber}</p>
+                    <button onclick=sub(${displayCart.id})>-</button>
                 </div>
             </div>
                 `
@@ -243,9 +198,34 @@
 
         }
         Shopping();
-        function add(itemNumber){
-            itemNumber +=  1;
-            console.log(itemNumber)
+        function add(id){
+            const result = document.getElementById("result");
+            const item = cart.find(function(marches){
+                return marches.id === id;
+            });
+            console.log();
+            if(item.itemNumber < item.quantity){
+                item.itemNumber += 1
+                result.innerHTML = item.itemNumber
+                console.log(item)
+                multiplying(item.itemNumber,item.price);
+            }
+        }
+        function sub(id){
+            const result = document.getElementById("result")
+            const item = cart.find(function(marches){
+                return marches.id === id;
+            });
+            if(item.itemNumber > 1){
+                item.itemNumber -= 1;
+                result.innerHTML = item.itemNumber;  
+                multiplying(item.itemNumber,item.price);
+            }
+        }
+        function multiplying(itemNumber,price){
+            const multiplied = document.getElementById("multiplied");
+            const mult = price * itemNumber;
+            multiplied.innerHTML = mult;
         }
     </script>
 </body>

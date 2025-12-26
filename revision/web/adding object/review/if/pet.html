@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const pets = [
+            { name: "Buddy", type: "Dog" },
+            { name: "Mimi", type: "Cat" },
+            { name: "Goldie", type: "Fish" }
+        ];
+        const pet={ name: "Buddy", type: "Dog" }
+        function same(){
+            pets.map(function(response){
+                if(response.type === pet.type){
+                    alert("It's there");
+                }else{
+                    pets.push(pet);
+                    console.log(pets);
+                }
+            })
+        }
+        same();
+    </script>
+</body>
+</html>

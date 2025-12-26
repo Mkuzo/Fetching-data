@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+const bagItems = [
+  { item: "Book", quantity: 2 },
+  { item: "Pen", quantity: 5 }
+];
+       const item = { item: "Erasor", quantity: 1 };
+       function same(){
+        bagItems.map(function(response){
+            if(response.item === item.item){
+                alert("There are the same");
+            }
+            else{
+                bagItems.push(item);
+                console.log(bagItems)
+            }
+        })
+       }
+       same()
+    </script>
+</body>
+</html>

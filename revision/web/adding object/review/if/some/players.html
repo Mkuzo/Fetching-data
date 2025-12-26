@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let players = [
+            { username: "leo", score: 50 },
+             { username: "mimi", score: 80 }
+        ]
+        const player =  { username: "mimi", score: 80 }
+        function findingsome(){
+            const check = players.some(function(response){
+                return response.username === player.username;
+            })
+            if(check === false){
+                players.push(player);
+            }else{
+                alert("It's There")
+            }
+        }
+        findingsome()
+    </script>
+</body>
+</html>

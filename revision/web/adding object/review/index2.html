@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const scores = [
+  { id: 1, math: 80 },
+  { id: 2, math: 95 },
+  { id: 3, math: 70 }
+];
+const marks={id:4,math:80}
+function mapping(){
+    scores.map(function(response){
+        console.log(response);
+        const put = {...response,...marks}
+        console.log(put);
+    })
+}
+function finding (){
+    const find2 = scores.filter(function(response2){
+        return response2.math > 70;
+    })
+    console.log(find2)
+}
+finding()
+mapping()
+    </script>
+</body>
+</html>

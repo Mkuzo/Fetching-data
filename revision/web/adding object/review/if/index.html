@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj=[
+            {id:1,name:'valentino',age:10},
+            {id:2,name:'alvan',age:7},
+            {id:3,name:'avelin',age:5},
+        ]
+        const person = {id:4,name:'avelin',age:5};
+        function conferm(){
+            obj.map(function(names){
+                if(names.id === person.id){
+                    alert("hello")
+                }else{
+                    obj.push(person);
+                    console.log(obj)
+                }
+            })
+        }
+        conferm()
+    </script>
+</body>
+</html>

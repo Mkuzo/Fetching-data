@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            flex-wrap: wrap;
+        }
+        .wraping{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .wraping img{
+            width: 100%;
+            height: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper" id="wrapper">
+        <div class="wraping">
+            <img src="Book.webp" alt="">
+            <p></p>
+            <button>Info</button>
+        </div>
+    </div>
+    <script>
+        const students = [
+  { id: 1, name: "Liam", class: "Grade 4" },
+  { id: 2, name: "Amina", class: "Grade 3" },
+  { id: 3, name: "Noah", class: "Grade 4" }
+];
+const wrapper = document.getElementById("wrapper")
+        function putting(){
+            students.map(function(response){
+                wrapper.innerHTML += `
+                    <div class="wraping">
+                        <img src="Book.webp" alt="">
+                        <p>${response.name}</p>
+                         <button onclick="alerting(${response.id})">Info</button>
+                    </div>
+                `
+            })
+        }
+        function alerting(id){
+            const alertt = students.find(function(response2){
+                return response2.id === id;
+            })
+            alert(alertt.name)
+        }
+        
+        putting()
+    </script>
+</body>
+</html>
